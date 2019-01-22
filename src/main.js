@@ -2,6 +2,9 @@
 import Vue from "vue/dist/vue";
 import VueRouter from "vue-router";
 import App from './App.vue';
+import ChangeLabel from './components/ChangeLable.vue';
+
+
 Vue.use(VueRouter);
 const Home = { template: "<div>我是 Home 页</div>" };
 const Foo = { template: "<div>我是 foo 页</div>" };
@@ -11,7 +14,8 @@ const routes = [
   { path: "/", component: Home },
   { path: "/foo", component: Foo },
   { path: "/bar", component: Bar },
-  { path: "/app", component: App }
+  { path: "/app", component: App },
+  { path: "/change", component: ChangeLabel }
 ];
 
 const router = new VueRouter({
@@ -28,6 +32,7 @@ new Vue({
       <li><router-link to="/foo">/foo</router-link></li>
       <li><router-link to="/bar">/bar</router-link></li>
       <li><router-link to="/app">/app</router-link></li>
+      <li><router-link to="/change">/change</router-link></li>
     </ul>
     router-view content:
     <router-view class="view"></router-view>
