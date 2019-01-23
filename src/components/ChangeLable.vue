@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "ChangeLabel",
   data: function() {
     return {
       loginType: "username",
